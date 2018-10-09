@@ -20,8 +20,7 @@ pushd %~dp0..\
 
 set NODE_X86_DOWNLOAD_URL=http://nodejs.org/dist/v%NODE_VERSION%/win-x86/node.exe
 set NODE_X64_DOWNLOAD_URL=http://nodejs.org/dist/v%NODE_VERSION%/win-x64/node.exe
-set NPM_DOWNLOAD_URL=https://codeload.github.com/npm/npm/zip/v%NPM_VERSION%
-:: This is the redirect url for https://github.com/npm/npm/archive/v%NPM_VERSION%.zip
+set NPM_DOWNLOAD_URL=https://github.com/npm/cli/archive/v%NPM_VERSION%.zip
 
 echo Cleaning previous build artifacts...
 
@@ -103,12 +102,12 @@ popd
 mkdir %TEMP_NPM_REPO%
 echo Downloading npm from %NPM_DOWNLOAD_URL%...
 pushd %TEMP_NPM_REPO%
-curl -k -o npm.zip %NPM_DOWNLOAD_URL%
+curl -k -o cli-%NPM_VERSION%.zip %NPM_DOWNLOAD_URL%
 if %errorlevel% neq 0 goto ERROR
 echo Unzipping npm from archive...
-unzip -q npm.zip
+unzip -q cli-%NPM_VERSION%.zip
 if %errorlevel% neq 0 goto ERROR
-del npm.zip
+del cli-%NPM_VERSION%.zip
 popd
 
 echo.
