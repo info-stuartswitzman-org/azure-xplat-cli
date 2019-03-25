@@ -9,8 +9,8 @@
 :: to avoid https://github.com/npm/npm/issues/6438
 chcp 850 
 
-set NODE_VERSION=8.11.2
-set NPM_VERSION=5.6.0
+set NODE_VERSION=8.12.0
+set NPM_VERSION=6.4.1
 
 :: Add Git to the path as this should be run through a .NET command prompt
 :: and not a Git bash shell... We also need the gnu toolchain (for curl & unzip)
@@ -20,8 +20,8 @@ pushd %~dp0..\
 
 set NODE_X86_DOWNLOAD_URL=http://nodejs.org/dist/v%NODE_VERSION%/win-x86/node.exe
 set NODE_X64_DOWNLOAD_URL=http://nodejs.org/dist/v%NODE_VERSION%/win-x64/node.exe
-set NPM_DOWNLOAD_URL=https://codeload.github.com/npm/npm/zip/v%NPM_VERSION%
-:: This is the redirect url for https://github.com/npm/npm/archive/v%NPM_VERSION%.zip
+set NPM_DOWNLOAD_URL=https://codeload.github.com/npm/cli/zip/v%NPM_VERSION%
+:: This is the redirect url for https://github.com/npm/cli/archive/v%NPM_VERSION%.zip
 
 echo Cleaning previous build artifacts...
 
