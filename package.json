@@ -80,7 +80,7 @@
     "easy-table": "1.1.0",
     "event-stream": "3.1.5",
     "eyes": "0.x.x",
-    "fast-json-patch": "0.5.6",
+    "fast-json-patch": "3.1.1",
     "github": "0.1.6",
     "js2xmlparser": "1.0.0",
     "jsonlint": "1.6.2",
